@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,14 +12,18 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule, CommonModule, FormsModule]
 })
 export class LoginPage implements OnInit {
-
-  constructor() { }
+  title = 'Login';
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   onSubmit(data:any) {
-   console.log(data.name);
+    if (data.UserId == "Admin" && data.Password == "Admin@123" ) {
+     this.router.navigate(['/home']);
+   } else {
+     alert("Login failed");
+   }
   }
 
 }

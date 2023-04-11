@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Login</ion-title>
+    <ion-title>{{title}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,7 +12,7 @@
   </ion-header>
 
   <div id="container">
-    <form #LoginForm = "ngForm" (ngSubmit)="onSubmit(LoginForm)">
+    <form #LoginForm = "ngForm" (ngSubmit)="onSubmit(LoginForm.value)">
       <label>User Id</label>
       <input type="text" name="UserId"  ngModel> 
       <label>Password</label>
