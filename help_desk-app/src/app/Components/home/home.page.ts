@@ -9,7 +9,5 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule],
 })
 export class HomePage {
-  constructor() {
-
-  }
+  constructor() {}
 }
