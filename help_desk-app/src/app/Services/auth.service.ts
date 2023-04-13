@@ -9,7 +9,7 @@ export class LoginAuthService {
   endpoint = environment.Apiendpoint;
   constructor(private http:HttpClient) { }
 
-  GetUser(UserId , Password){
-    return this.http.get(`${this.endpoint}/AllUsers`)
-  }
+  // GetUser(UserId , Password){
+  //   return this.http.post(`${this.endpoint}/AllUsers`)
+  // }
 }

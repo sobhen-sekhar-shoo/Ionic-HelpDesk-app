@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import {Router} from '@angular/router';
-import {LoginAuthService} from "../../Services/auth.service"
+import {LoginAuthService} from "../../../Services/auth.service"
 
 @Component({
   selector: 'app-login',
@@ -20,11 +20,11 @@ export class LoginPage implements OnInit {
   }
 
   onSubmit(data:any) {
-    this.loginAuth.GetUser(data.UserId, data.Password).subscribe((data:any)=>{
-      console.log(data)
-    })
+  //   this.loginAuth.GetUser(data.UserId, data.Password).subscribe((data:any)=>{
+  //     console.log(data)
+  //   })
     
-    if (data.UserId == "Admin" && data.Password == "Admin@123" ) {
+    if (data.UserId  == "Admin" && data.Password == "Admin@123" ) {
      this.router.navigate(['/home']);
    } else {
      alert("Login failed");

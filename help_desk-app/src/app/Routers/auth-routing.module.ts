@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  // { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
   {
     path: '',
     redirectTo: 'login',
