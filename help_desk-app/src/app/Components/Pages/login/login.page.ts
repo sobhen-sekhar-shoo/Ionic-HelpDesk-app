@@ -25,7 +25,7 @@ export class LoginPage implements OnInit {
   //   })
     
     if (data.UserId  == "Admin" && data.Password == "Admin@123" ) {
-     this.router.navigate(['/client/home']);
+     this.router.navigate(['/client/dashboard']);
    } else {
      alert("Login failed");
    }

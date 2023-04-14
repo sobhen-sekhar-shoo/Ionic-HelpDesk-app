@@ -19,7 +19,7 @@ const routes: Routes = [
     component : LoginPage,
   },
   {
-    path: 'home',
+    path: 'dashboard',
     component : HomePage,
   },
 ];

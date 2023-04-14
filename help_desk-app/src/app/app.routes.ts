@@ -17,15 +17,16 @@ const routes: Routes = [
   {
     path: 'client',
     loadComponent : () => import('./Components/Layouts/main-layout/main-layout.page').then((m) => m.MainLayoutPage),
-    // loadChildren: () => import('./Modules/auth/auth.module').then((m) => m.AuthModule),
-    children: [
-      {
-        path: 'home',
-        pathMatch : 'full',
-        component : HomePage,
-      },
-    ]
-  },  {
+    loadChildren: () => import('./Modules/auth/auth.module').then((m) => m.AuthModule),
+    // children: [
+    //   {
+    //     path: 'home',
+    //     pathMatch : 'full',
+    //     component : HomePage,
+    //   },
+    // ]
+  },
+  {
     path: 'left-menu',
     loadComponent: () => import('./Components/Common/left-menu/left-menu.page').then( m => m.LeftMenuPage)
   },
