@@ -6,7 +6,7 @@ import {environment} from "src/environments/environment"
   providedIn: 'root'
 })
 export class LoginAuthService {
-  endpoint = environment.Apiendpoint;
+  // endpoint = environment.Apiendpoint;
   constructor(private http:HttpClient) { }
 
   // GetUser(UserId , Password){
