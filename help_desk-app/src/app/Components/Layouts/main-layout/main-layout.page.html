@@ -1,20 +1,21 @@
+<ion-content>
+  <ion-split-pane class="MainContent_wrapper">
+    <app-left-menu></app-left-menu>
 
+    <ion-content class="ContentBody" [scrollEvents]="false">
+      <app-top-navbar></app-top-navbar>
 
-
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>mainLayoutA</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">mainLayoutB</ion-title>
-    </ion-toolbar>
-  </ion-header>
+      <ion-content >
+        <ion-router-outlet></ion-router-outlet>
+      </ion-content>
+    </ion-content>
+  </ion-split-pane>
 </ion-content>
 
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+<!-- <app-footer></app-footer> -->
+
+<ion-footer class="footer_Wrapper">
+  <ion-toolbar>
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>

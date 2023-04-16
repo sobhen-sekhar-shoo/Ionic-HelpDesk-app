@@ -5,24 +5,15 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Login</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <div id="container">
     <form #LoginForm = "ngForm" (ngSubmit)="onSubmit(LoginForm.value)">
-      <label>User Id</label>
-      <input type="text" name="UserId"  ngModel> 
-      <label>Password</label>
-      <input type="text" name="Password" ngModel>
+      <ion-input label="User Id" labelPlacement="floating" fill="outline" [clearInput]="true" placeholder="Enter UserId"  type="text" name="UserId"  ngModel></ion-input>
+      <br/>
+      <ion-input label="Password" labelPlacement="floating" fill="outline" [clearInput]="true" placeholder="Enter Password"  type="text" name="Password" ngModel></ion-input>
         <br/>
       <br/>
       <input type="submit" value="submit"/>
 
     </form>
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    </div>
 </ion-content>

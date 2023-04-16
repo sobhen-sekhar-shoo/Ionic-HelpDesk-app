@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { HomePage} from './Components/Pages/home/home.page';
 
 const routes: Routes = [
-  // { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
   {
     path: '',
     redirectTo: 'login',
@@ -16,21 +14,14 @@ const routes: Routes = [
   },
   {
     path: 'client',
-    loadComponent : () => import('./Components/Layouts/main-layout/main-layout.page').then((m) => m.MainLayoutPage),
+    loadComponent:() => import('./Components/Layouts/main-layout/main-layout.page').then((m) => m.MainLayoutPage),
     loadChildren: () => import('./Modules/auth/auth.module').then((m) => m.AuthModule),
-    // children: [
-    //   {
-    //     path: 'home',
-    //     pathMatch : 'full',
-    //     component : HomePage,
-    //   },
-    // ]
   },
-  {
-    path: 'left-menu',
-    loadComponent: () => import('./Components/Common/left-menu/left-menu.page').then( m => m.LeftMenuPage)
-  },
-
+  {  // Wildcard route for a 404 page
+    path: '**',
+    loadComponent: () => import('./Components/Common/Errors/page-not-found/page-not-found.page')
+    .then((m) => m.PageNotFoundPage), 
+ },
 ];
 
 @NgModule({
