@@ -1,3 +1,61 @@
-// .leftMenu_Wrapper{
-//     width: 20%;
-// }
+.sidenav {
+  background: #0450cc;
+  height: 100%;
+  left: 0;
+  overflow-x: hidden;
+  position: relative;
+  width: 80px;
+  z-index: 1001;
+}
+
+.logoside_bar {
+  width: 110%;
+  position: relative;
+  top: 10px;
+  cursor: pointer;
+}
+
+.sidebar_menus {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 56px);
+
+  .sidebar_menu_top {
+    margin: 15px 0px;
+
+    .modules {
+      margin-bottom: 10px;
+
+      .outline_menu {
+        text-decoration: none;
+
+        .menu {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding: 8px 15px;
+          margin: 6px 6px 3px;
+          border-radius: 5px;
+          cursor: pointer;
+          flex-direction: column;
+
+          .menu_txt {
+            font-size: 12px;
+            margin-top: 5px;
+            color: white;
+          }
+
+          .IonIcon {
+            color: #ffffff !important;
+            font-size: 18px;
+            margin: 4px 0px;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+

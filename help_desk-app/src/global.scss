@@ -32,6 +32,7 @@ body{
     --ion-toolbar-background: #ffffff !important;
     --ion-tab-bar-background: #ffffff !important;
     --ion-card-background: #ffffff !important;
+    --side-min-width: 80px;
 }
 
 .inner-scroll::-webkit-scrollbar {
@@ -53,4 +54,3 @@ body{
  .inner-scroll::-webkit-scrollbar-thumb:hover {
    background: #95c21a;
  }
-

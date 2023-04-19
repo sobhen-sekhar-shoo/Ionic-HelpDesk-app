@@ -19,11 +19,12 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
+
   onSubmit(data:any) {
   //   this.loginAuth.GetUser(data.UserId, data.Password).subscribe((data:any)=>{
   //     console.log(data)
   //   })
-    
+
     if (data.UserId  == "Admin" && data.Password == "Admin@123" ) {
      this.router.navigate(['/client/dashboard']);
    } else {
